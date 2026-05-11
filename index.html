@@ -1,1 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Alpha Nutrition | Premium Supplements</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Inter:wght@400;700&display=swap');
+        body { background-color: #000; color: #fff; font-family: 'Inter', sans-serif; }
+        .gold-text { color: #D4AF37; }
+        .gold-bg { background: linear-gradient(135deg, #D4AF37 0%, #B8860B 100%); }
+        .alpha-font { font-family: 'Montserrat', sans-serif; }
+        .product-card { background: linear-gradient(180deg, #111 0%, #050505 100%); border: 1px solid #222; }
+    </style>
+</head>
+<body class="pb-24">
+    <nav class="p-5 flex flex-col items-center border-b border-zinc-900 sticky top-0 bg-black/90 backdrop-blur-lg z-50">
+        <h1 class="alpha-font text-2xl italic font-black tracking-tighter uppercase">ALPHA<span class="gold-text">NUTRITION</span></h1>
+        <p class="text-[10px] text-zinc-500 tracking-widest mt-1 uppercase font-bold">100% Genuine • Fast Delivery</p>
+    </nav>
+
+    <main class="p-6 space-y-6">
+        <div class="product-card rounded-3xl p-5">
+            <div class="h-48 bg-zinc-900 rounded-2xl mb-6 flex items-center justify-center border border-zinc-800 text-zinc-700 font-black text-4xl italic">WHEY</div>
+            <div class="flex justify-between items-end mb-4">
+                <div>
+                    <h3 class="text-lg font-bold uppercase italic">Premium Whey</h3>
+                    <p class="text-zinc-500 text-xs font-bold uppercase tracking-widest">2kg • Lab Tested</p>
+                </div>
+                <p class="gold-text font-black text-2xl">₹4,999</p>
+            </div>
+            <button onclick="sendOrder('Whey Protein', '₹4,999')" class="gold-bg text-black w-full py-4 rounded-2xl font-black uppercase tracking-widest text-sm active:opacity-80">Order via WhatsApp</button>
+        </div>
+
+        <div class="product-card rounded-3xl p-5">
+            <div class="h-48 bg-zinc-900 rounded-2xl mb-6 flex items-center justify-center border border-zinc-800 text-zinc-700 font-black text-4xl italic">PRE</div>
+            <div class="flex justify-between items-end mb-4">
+                <div>
+                    <h3 class="text-lg font-bold uppercase italic">Alpha Pre-Workout</h3>
+                    <p class="text-zinc-500 text-xs font-bold uppercase tracking-widest">Explosive Power</p>
+                </div>
+                <p class="gold-text font-black text-2xl">₹2,499</p>
+            </div>
+            <button onclick="sendOrder('Pre-Workout', '₹2,499')" class="gold-bg text-black w-full py-4 rounded-2xl font-black uppercase tracking-widest text-sm active:opacity-80">Order via WhatsApp</button>
+        </div>
+    </main>
+
+    <footer class="p-10 text-center border-t border-zinc-900 bg-zinc-950 text-sm">
+        <p class="gold-text font-bold mb-1">+91 8653320872</p>
+        <p class="text-zinc-500 text-[10px] uppercase tracking-widest">Official Alpha Nutrition Store</p>
+    </footer>
+
+    <script>
+        function sendOrder(name, price) {
+            const phone = "918653320872";
+            const message = `Hello Alpha Nutrition! I want to order:\n\n*Product:* ${name}\n*Price:* ${price}`;
+            window.location.href = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+        }
+    </script>
+</body>
+</html>
 
